@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "rm-dev": "remotion rm"
+    "lint": "next lint .",
+    "prettier:format": "prettier --write ./**/*.{scss,ts,tsx,json}",
+    "rm-dev": "remotion preview ./rm/index.ts"
   },
   "dependencies": {
     "@next/font": "13.1.2",
@@ -15,12 +16,14 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
+    "antd": "^5.1.4",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.2",
     "lodash": "^4.17.21",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
     "remotion": "^3.3.31",
     "sass": "^1.57.1",
     "typescript": "4.9.4"
@@ -30,6 +33,7 @@
     "autoprefixer": "^10.4.13",
     "node-sass": "^8.0.0",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
     "tailwindcss": "^3.2.4"
   }
 }

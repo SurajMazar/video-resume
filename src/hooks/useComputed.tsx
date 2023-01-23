@@ -7,11 +7,9 @@ import { useCallback } from 'react'
  * @returns
  */
 const useComputed = <T, U>(filter: () => T, deps: Array<U> = []) => {
-	return useCallback(() => {
-		return filter()
-	}, [...deps])() //eslint-disable-line
+  return useCallback(() => {
+    return filter()
+  }, [...deps])() //eslint-disable-line
 }
 
-
 export default useComputed
-

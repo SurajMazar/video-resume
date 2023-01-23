@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const PigDream: React.FC = () => {
   return (
@@ -99,7 +99,7 @@ const PigDream: React.FC = () => {
         </g>
       </svg>
     </>
-  );
-};
+  )
+}
 
-export default PigDream;
+export default PigDream

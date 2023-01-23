@@ -1,90 +1,86 @@
 @keyframes growUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes grow {
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes growShrink {
-    0% {
-        transform: scale(0.95);
-    }
+  0% {
+    transform: scale(0.95);
+  }
 
-    50% {
-        transform: scale(1);
-    }
+  50% {
+    transform: scale(1);
+  }
 
-    100% {
-        transform: scale(0.95);
-    }
+  100% {
+    transform: scale(0.95);
+  }
 }
 
 @keyframes growShrinkCrown {
-    from {
-        opacity: 0;
-        transform: scale(0) translateY(30px) translateX(60px);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(30px) translateX(60px);
+  }
 
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(30px) translateX(60px);
-    }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(30px) translateX(60px);
+  }
 }
-
 
 @keyframes rock {
-    0% {
-        transform: rotate(-5deg);
-    }
+  0% {
+    transform: rotate(-5deg);
+  }
 
-    50% {
-        transform: rotate(0deg);
-    }
+  50% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(-5deg);
-    }
+  100% {
+    transform: rotate(-5deg);
+  }
 }
-
-
 
 #pig-body {
-    transform-origin: bottom;
-    animation: rock ease-in-out infinite 3s;
+  transform-origin: bottom;
+  animation: rock ease-in-out infinite 3s;
 }
-
 
 #crown {
-    animation: growShrinkCrown ease-in-out 2s;
-    transform: translateY(30px) translateX(60px);
+  animation: growShrinkCrown ease-in-out 2s;
+  transform: translateY(30px) translateX(60px);
 }
 
-#dream-bubble{
-    transform-origin: bottom;
-    animation: growShrink ease-in-out infinite 2s;
+#dream-bubble {
+  transform-origin: bottom;
+  animation: growShrink ease-in-out infinite 2s;
 }
 
 #money-top,
 #money-bottom,
 #plane,
 #house {
-    transform-origin: center;
-    animation: grow ease-in-out 2s;
+  transform-origin: center;
+  animation: grow ease-in-out 2s;
 }

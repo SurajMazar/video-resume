@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const PigMoney: React.FC = () => {
   return (
@@ -110,7 +110,7 @@ const PigMoney: React.FC = () => {
         </g>
       </g>
     </>
-  );
-};
+  )
+}
 
-export default PigMoney;
+export default PigMoney

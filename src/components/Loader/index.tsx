@@ -1,48 +1,47 @@
-import { LoaderContext } from "@/context/LoaderContext";
-import useComputed from "@/hooks/useComputed";
-import React, { PropsWithChildren, useContext } from "react";
-import { createPortal } from "react-dom";
-import PigDream from "./Partial/PigDream";
-import PigFlight from "./Partial/PigFlight";
-import PigHouse from "./Partial/PigHouse";
-import PigKing from "./Partial/PigKing";
-import PigMoney from "./Partial/PigMoney";
+import { LoaderContext } from '@/context/LoaderContext'
+import useComputed from '@/hooks/useComputed'
+import React, { PropsWithChildren, useContext } from 'react'
+import { createPortal } from 'react-dom'
+import PigFlight from './Partial/PigFlight'
+import PigHouse from './Partial/PigHouse'
+import PigKing from './Partial/PigKing'
+import PigMoney from './Partial/PigMoney'
 
 const Loader: React.FC<
   PropsWithChildren<{
-    show?: boolean;
-    message?: string;
+    show?: boolean
+    message?: string
   }>
 > = (props) => {
   /**
    * LOADER CONTEXT
    */
-  const { progress, showLoader } = useContext(LoaderContext);
+  const { progress, showLoader } = useContext(LoaderContext)
 
   /**
    * COMPONENT PROPS
    */
-  const { show, message } = props;
+  const { show, message } = props
 
   /**
    * LOADER IMAGE
    */
   const LoaderImage = useComputed(() => {
-    if(!show){
+    if (!show) {
       if (progress < 25) {
-        return <PigFlight />;
+        return <PigFlight />
       } else if (progress < 50) {
-        return <PigMoney />;
+        return <PigMoney />
       } else if (progress < 75) {
-        return <PigHouse />;
+        return <PigHouse />
       } else {
-        return <PigKing />;
+        return <PigKing />
       }
-    }else{
-      const elements = [<PigFlight />,<PigMoney />,<PigHouse />,<PigKing />] //eslint-disable-line
+    } else {
+      const elements = [<PigFlight />, <PigMoney />, <PigHouse />, <PigKing />] //eslint-disable-line
       return elements[Math.floor(Math.random() * elements.length)]
     }
-  }, [progress]);
+  }, [progress])
 
   return createPortal(
     <>
@@ -149,28 +148,28 @@ const Loader: React.FC<
           {showLoader || show ? (
             <div
               className={`${
-                progress < 90 ? "text-blue-400" : "text-green-500"
+                progress < 90 ? 'text-blue-400' : 'text-green-500'
               }  text-2xl font-medium`}
             >
-              {!message ? (
+              {show && message ? (
+                message
+              ) : (
                 <>
-                  {progress < 90 ? "Please wait" : "Almost there"} ...{" "}
+                  {progress < 90 ? 'Please wait' : 'Almost there'} ...{' '}
                   <span className="font-extrabold">{progress}%</span>
                 </>
-              ) : (
-                message
               )}
             </div>
           ) : (
-            ""
+            ''
           )}
         </div>
       ) : (
-        ""
+        ''
       )}
     </>,
     document.body
-  );
-};
+  )
+}
 
-export default Loader;
+export default Loader

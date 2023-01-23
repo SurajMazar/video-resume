@@ -1,18 +1,18 @@
-import React from "react";
-import { Composition } from "remotion";
-import Portfolio from "../../src/components/Video/Portfolio";
+import React from 'react'
+import { Composition } from 'remotion'
+import Default from '../../src/themes/default'
 
 const CompositionComponent: React.FC = () => {
   return (
     <Composition
       id="Empty"
-      component={Portfolio}
+      component={Default}
       durationInFrames={60}
       fps={60}
       width={1280}
       height={720}
     />
-  );
-};
+  )
+}
 
-export default CompositionComponent;
+export default CompositionComponent

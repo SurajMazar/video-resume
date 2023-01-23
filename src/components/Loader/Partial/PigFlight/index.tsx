@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from 'react'
 
 const PigFlight: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ const PigFlight: React.FC = () => {
         />
       </g>
     </>
-  );
-};
+  )
+}
 
-export default PigFlight;
+export default PigFlight

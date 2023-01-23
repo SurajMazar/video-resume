@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const PigHouse: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ const PigHouse: React.FC = () => {
         />
       </g>
     </>
-  );
-};
+  )
+}
 
-export default PigHouse;
+export default PigHouse
