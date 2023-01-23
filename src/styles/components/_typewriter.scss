@@ -1,0 +1,23 @@
+.typewriter {
+  width: 21ch;
+  animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+  font-family: 'Kaushan Script', cursive;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2.5em;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}

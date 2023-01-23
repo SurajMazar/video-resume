@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 body {
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', serif;
 }
 
 @import 'components/loader';
+@import 'components/typewriter';
 @import 'antd/dist/reset.css';
