@@ -9,7 +9,7 @@ const PlayerWrapper: React.FC = () => {
         component={Player}
         compositionHeight={400}
         compositionWidth={600}
-        durationInFrames={5 * 60}
+        durationInFrames={10 * 60}
         fps={60}
         controls
         spaceKeyToPlayOrPause

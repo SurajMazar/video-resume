@@ -46,7 +46,7 @@ const Loader: React.FC<
   return createPortal(
     <>
       {showLoader || show ? (
-        <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-full bg-[rgba(255,255,255,0.90)]">
+        <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-full bg-[rgba(255,255,255)]">
           <div className="mb-10 transition duration-200">
             <svg
               width={173}

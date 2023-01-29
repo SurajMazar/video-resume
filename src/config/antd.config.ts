@@ -3,7 +3,7 @@ import { ThemeConfig } from 'antd/es/config-provider/context'
 const antdTheme: ThemeConfig = {
   token: {
     colorPrimary: '#6C63FF',
-    fontFamily: 'Quicksand, sans-serif'
+    fontFamily: 'Poppins , sans-serif'
   },
   components: {
     Input: {

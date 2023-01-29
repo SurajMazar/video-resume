@@ -2,6 +2,7 @@ import {NextPage} from 'next'
 import {Button} from 'antd'
 import Header from "@/components/Header";
 import Image from "next/image";
+import Router from 'next/router';
 
 const Home: NextPage = () => {
     return (
@@ -20,6 +21,9 @@ const Home: NextPage = () => {
                 shape={'round'}
                 type={'primary'}
                 className={'bg-primary'}
+                onClick={()=>{
+                    Router.push('/video')
+                }}
             >
                 Start Building
             </Button>
