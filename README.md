@@ -7,6 +7,7 @@ resume instead of a traditional text-based one. Just fill up the form and see th
 ### Application Information
 
 ---
+#### Note application requires node version greater than 16
 
 For now the application don't have a backend and it is 
 currently being hosted at [Vercel](https://visual-resume.vercel.app).
