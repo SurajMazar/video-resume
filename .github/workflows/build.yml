@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: macos-latest
+
+    steps:
+      - name: Enable Debug Logging
+        run: echo "SONAR_SCANNER_OPTS=-X" >> $GITHUB_ENV
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: "sqp_76e61b5e3c995507d032a1759da87f3e2a0eee1c"
+          SONAR_HOST_URL: 'http://localhost:9000'
+
+      # If you wish to fail your job when the Quality Gate is red, uncomment the
+      # following lines. This would typically be used to fail a deployment.
+      # - uses: SonarSource/sonarqube-quality-gate-action@v1
+      #   timeout-minutes: 5
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
